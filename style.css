@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #383838;
+  font-family: "Poppins", sans-serif;
+}
+.content {
+  color: #09fbba;
+  transition: 1s;
+}
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+p {
+  padding: 3rem 5rem;
+}
+
+#side-bar {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  background: #09fbba;
+  left: -300px;
+  transition: 0.5s ease-out;
+  z-index: 4;
+}
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 310px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.toggle-btn span {
+  width: 60px;
+  height: 10px;
+  border-radius: 5px;
+  background: #09fbba;
+  display: block;
+  margin-top: 4px;
+  transition: 0.3s ease;
+}
+
+li {
+  color: #292929;
+  list-style: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+li:hover {
+  background: #292929;
+  color: #fcfcfb;
+}
+
+#side-bar.active {
+  left: 0;
+}
+#side-bar.active .toggle-btn {
+  top: 2.8rem;
+  left: 235px;
+}
+#side-bar.active span {
+  position: absolute;
+}
+#side-bar.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0px;
+}
+#side-bar.active span:nth-child(2) {
+  opacity: 0;
+}
+#side-bar.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+#side-bar.active ~ .content {
+  opacity: 0.3;
+}
+
+/* SIGNATURE */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap");
+
+.signature {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(51, 51, 51, 0.808);
+  padding: 0.5rem 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 0 0px 3px rgb(9, 251, 186);
+  color: rgb(9, 251, 186);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.signature:hover {
+  transform: translateX(3px);
+  background: linear-gradient(
+    90deg,
+    rgba(51, 51, 51, 0.808) 30%,
+    rgba(100, 100, 100, 0.808) 100%
+  );
+  transition: 0.3s ease;
+  box-shadow: 0 0 0px 3px rgb(79, 250, 204);
+  color: rgb(79, 250, 204);
+}
+.signature:focus {
+  outline: none;
+}
+.signature .flag {
+  height: 13px;
+  width: 22px;
+  background: linear-gradient(90deg, blue 36%, white 36%, white 67%, red 67%);
+  box-shadow: inset 2px 2px 2px #222, 2px 2px 1px #222;
+  margin-right: 6px;
+  transform: translateY(3px);
+}
+.signature h3 {
+  margin: 0;
+}
+.signature i {
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 1px #222;
+  transform: translateY(2px);
+}
